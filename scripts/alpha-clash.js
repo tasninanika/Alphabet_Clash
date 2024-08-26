@@ -9,8 +9,21 @@
 // playGround.classList.remove('hidden');
 
 
-function handleKeyboard(){
+function handleKeyboard(event){
+    const playerPress = event.key;
 
+    // expected to press
+    const alpha = document.getElementById('alpha');
+    const expectedAlpha = alpha.innerText;
+    const expectedAlphabet = expectedAlpha.toLowerCase();
+
+    // checked
+    if(playerPress === expectedAlphabet){
+
+    }
+    else{
+        
+    }
 }
 document.addEventListener('keyup', handleKeyboard);
 
