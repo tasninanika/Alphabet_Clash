@@ -13,16 +13,16 @@
 <body class="font-poppins">
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home -->
-    <section class="home min-h-screen text-white flex justify-center items-center hidden">
+    <section id="home" class="min-h-screen text-white flex justify-center items-center">
         <div class="flex flex-col items-center gap-3">
             <h1 class="text-[170px] font-anton uppercase">Alphabet Clash</h1>
             <p class="text-2xl font-medium pb-9">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button class="btn bg-white text-black text-2xl font-semibold">Play Now</button>
+            <button onclick="play()" class="btn bg-white text-black text-xl font-semibold">Play Now</button>
         </div>
     </section>
     <!-- play ground -->
-    <section class="play-ground">
-        <div class="flex flex-col items-center gap-16 pt-20">
+    <section id="play-ground" class="hidden">
+        <div class="flex flex-col items-center gap-16 pt-16">
             <!-- screen -->
             <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-xl border-[#010313ce] bg-[#FFFFFFB3]">
                 <div class="flex justify-center">
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <!-- keyboard start-->
-             <div>
+             <div class="">
                 <div class="my-1 flex w-full justify-center gap-1">
                     <kbd class="kbd">q</kbd>
                     <kbd class="kbd">w</kbd>
@@ -81,12 +81,20 @@
                   </button>
              </div>
         </div>
-
     </section>
     <!-- score -->
-    <section class="score">
-
+    <section id="score" class="flex justify-center items-center min-h-screen hidden">
+        <div class="text-white text-center rounded-xl p-10" style="background-image: linear-gradient(121deg, rgba(255, 255, 255, 0.56) 0%, rgba(152, 151, 151, 0.00) 102.2%);">
+            <h1 class="text-7xl pb-7">
+                <span class="font-bold">Score :</span>
+                <span>14</span>
+            </h1>
+            <button class="btn text-xl">Play Again</button>
+            <p class="text-lg pt-4">Practice will make you Pro</p>
+        </div>
     </section>
     </main>
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/alpha-clash.js"></script>
 </body>
 </html>
