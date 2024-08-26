@@ -9,6 +9,11 @@
 // playGround.classList.remove('hidden');
 
 
+function handleKeyboard(){
+
+}
+document.addEventListener('keyup', handleKeyboard);
+
 function continueGame(){
     // step-1: generate a random alphabet
     const alphabet = getRandomAlpha();
