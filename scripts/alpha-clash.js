@@ -8,9 +8,20 @@
 // const playGround = document.getElementById('play-ground');
 // playGround.classList.remove('hidden');
 
+
+function continueGame(){
+    // step-1: generate a random alphabet
+    const alphabet = getRandomAlpha();
+
+    // set randomly alphabet
+    const getAlpha = document.getElementById('alpha');
+    getAlpha.innerText = alphabet;
+}
+
+
 // reuse
 function play(){
     hideElement('home');
     showElement('play-ground');
-    
+    continueGame();
 }
