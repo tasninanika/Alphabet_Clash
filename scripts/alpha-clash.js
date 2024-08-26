@@ -16,6 +16,9 @@ function continueGame(){
     // set randomly alphabet
     const getAlpha = document.getElementById('alpha');
     getAlpha.innerText = alphabet;
+
+    // set bg color
+    addBgColor(alphabet);
 }
 
 

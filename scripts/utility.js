@@ -9,6 +9,11 @@ function showElement(elementId){
     element.classList.remove('hidden');
 }
 
+function addBgColor(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('bg-orange-400');
+}
+
 function getRandomAlpha(){
     // create an alphabet array
     const alphabetString = 'abcdefghijklmnopqrstuvwxyz';
