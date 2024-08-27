@@ -20,39 +20,42 @@ function handleKeyboard(event){
 
     // checked
     if(playerPress === expectedAlphabet){
-        console.log('perfect');
 
         // update score
         // 1. get the currennt score
-        const currentScoreElement = document.getElementById('current-score');
-        const currentScoreText = currentScoreElement.innerText;
-        const currentScore = parseInt(currentScoreText);
+        // const currentScoreElement = document.getElementById('current-score');
+        // const currentScoreText = currentScoreElement.innerText;
+        // const currentScore = parseInt(currentScoreText);
 
-        // 2. increase the score by 1
+        // reuse func
+        const currentScore = getScore('current-score');
+
+        // // 2. increase the score by 1
         const newScore = currentScore + 1;
 
-        // 3. show the update score
-        currentScoreElement.innerText = newScore;
+        // // 3. show the update score
+        // currentScoreElement.innerText = newScore;
+        setScoreValue('current-score', newScore);
         
-
-
         removeBgColor(expectedAlphabet);
         continueGame();
         
     }
     else{
-        console.log('nooo');
-        // get the current life number
-        const currentLifeElement = document.getElementById('current-life');
-        const currentLifeText = currentLifeElement.innerText;
-        const currentLife = parseInt(currentLifeText);
-        // reduce the life count
+        const currentLife = getScore('current-life');
         const newLife = currentLife - 1;
-        // display
-        currentLifeElement.innerText = newLife;
+        setScoreValue('current-life', newLife);
+
+        // get the current life number
+        // const currentLifeElement = document.getElementById('current-life');
+        // const currentLifeText = currentLifeElement.innerText;
+        // const currentLife = parseInt(currentLifeText);
+        // // reduce the life count
+        // const newLife = currentLife - 1;
+        // // display
+        // currentLifeElement.innerText = newLife;
     }
 
-    
 }
 document.addEventListener('keyup', handleKeyboard);
 
