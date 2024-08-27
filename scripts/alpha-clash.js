@@ -11,7 +11,11 @@
 
 function handleKeyboard(event){
     const playerPress = event.key;
-    console.log(playerPress);
+    
+    // stop the game
+    if(playerPress === 'Escape'){
+        gameOver();
+    }
 
     // expected to press
     const currentAlpha = document.getElementById('alpha');
