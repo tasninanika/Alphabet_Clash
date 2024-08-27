@@ -90,4 +90,8 @@ function play(){
 function gameOver(){
     hideElement('play-ground');
     showElement('score');
+    // update final score
+    // get the final score
+    const finalScore = getScore('current-score');
+    setScoreValue('final-score', finalScore);
 }
