@@ -46,6 +46,10 @@ function handleKeyboard(event){
         const newLife = currentLife - 1;
         setScoreValue('current-life', newLife);
 
+        if(newLife === 0){
+            gameOver();
+        }
+
         // get the current life number
         // const currentLifeElement = document.getElementById('current-life');
         // const currentLifeText = currentLifeElement.innerText;
@@ -75,6 +79,15 @@ function continueGame(){
 // reuse
 function play(){
     hideElement('home');
+    hideElement('score');
     showElement('play-ground');
+    // reset score
+    setScoreValue('current-life', 5);
+    setScoreValue('current-score', 0);
     continueGame();
+}
+
+function gameOver(){
+    hideElement('play-ground');
+    showElement('score');
 }
