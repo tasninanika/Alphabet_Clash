@@ -11,19 +11,40 @@
 
 function handleKeyboard(event){
     const playerPress = event.key;
+    console.log(playerPress);
 
     // expected to press
-    const alpha = document.getElementById('alpha');
-    const expectedAlpha = alpha.innerText;
+    const currentAlpha = document.getElementById('alpha');
+    const expectedAlpha = currentAlpha.innerText;
     const expectedAlphabet = expectedAlpha.toLowerCase();
 
     // checked
     if(playerPress === expectedAlphabet){
+        console.log('perfect');
 
-    }
-    else{
+        // update score
+        // 1. get the currennt score
+        const currentScoreElement = document.getElementById('current-score');
+        const currentScoreText = currentScoreElement.innerText;
+        const currentScore = parseInt(currentScoreText);
+
+        // 2. increase the score by 1
+        const newScore = currentScore + 1;
+
+        // 3. show the update score
+        currentScoreElement.innerText = newScore;
+        
+
+
+        removeBgColor(expectedAlphabet);
+        continueGame();
         
     }
+    else{
+        console.log('nooo');
+    }
+
+    
 }
 document.addEventListener('keyup', handleKeyboard);
 
