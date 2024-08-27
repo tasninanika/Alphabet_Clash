@@ -94,4 +94,8 @@ function gameOver(){
     // get the final score
     const finalScore = getScore('current-score');
     setScoreValue('final-score', finalScore);
+
+    // clear the last selected alphabet
+    const alphabetSelected = getElementText('alpha');
+    removeBgColor(alphabetSelected);
 }
